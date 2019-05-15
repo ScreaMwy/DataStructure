@@ -21,4 +21,6 @@ public class ArrayStack<T> {
     public void set() {}
 
     public void get() {}
+
+    public void display() {}
 }
