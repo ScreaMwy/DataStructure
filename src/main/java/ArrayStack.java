@@ -14,5 +14,11 @@ public class ArrayStack<T> {
         this(ArrayStack.DEFAULT_CAPACITY);
     }
 
+    public void add() {}
 
+    public void remove() {}
+
+    public void set() {}
+
+    public void get() {}
 }
