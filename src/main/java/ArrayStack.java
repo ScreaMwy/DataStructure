@@ -23,4 +23,9 @@ public class ArrayStack<T> {
     public void get() {}
 
     public void display() {}
+
+    @Override
+    public String toString() {
+        return null;
+    }
 }
