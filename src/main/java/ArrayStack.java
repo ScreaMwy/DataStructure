@@ -14,5 +14,5 @@ public class ArrayStack<T> {
         this(ArrayStack.DEFAULT_CAPACITY);
     }
 
-    
+
 }
