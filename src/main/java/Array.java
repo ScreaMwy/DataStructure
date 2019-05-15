@@ -87,23 +87,12 @@ public class Array<T> {
         return -1;
     }
 
-    private int binarySearch(T e, int low, int high) {
-        int mid = 0;
-        if (low <= high) {
-            mid = (low + high) / 2;
-            binarySearch(e, low, mid);
-            binarySearch(e, mid + 1, high);
-            search(e, low, high);
-        }
-        return -1;
-    }
-
     /**
      * @param e
      * @return
      */
     public boolean remove(T e) {
-        int targetIndex = binarySearch(e, 0, this.size);
+        int targetIndex = search(e, 0, this.size);
         if (targetIndex > 0) {
             for (int i = targetIndex; i < this.size; i++) {
                 this.arrays[i] = this.arrays[i + 1];
@@ -126,8 +115,16 @@ public class Array<T> {
 
     }
 
-    public int get(T e) {
-        return this.binarySearch(e, 0, this.size);
+    public T get(T e, int low, int high) {
+        return this.arrays[this.contain(e, low, high)];
+    }
+
+    public T get(T e) {
+        return this.get(e, 0, this.size);
+    }
+
+    public int contain(T e, int low, int high) {
+        return this.search(e, low, high);
     }
 
     public void display() {

@@ -18,16 +18,16 @@ public class Main {
         a.display();
         System.out.printf("\n");
 
-//        a.remove(4.00);
-//        System.out.printf("刪除後：");
-//        a.display();
-//        System.out.printf("\n");
+        a.remove(4.00);
+        System.out.printf("刪除後：");
+        a.display();
+        System.out.printf("\n");
 
-        int target = a.get(8.00);
+         double target = a.get(12.00);
         if (target > 0) {
-            System.out.printf("元素存在：%d\n", target);
+            System.out.printf("元素存在：%.4f\n", target);
         } else {
-            System.out.printf("元素不存在：%d\n", target);
+            System.out.printf("元素不存在：%.4f\n", target);
         }
     }
 }
